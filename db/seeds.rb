@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+5.times do
+  user = User.create!(
+  username: Faker::HarryPotter.character,
+  email: Faker::Internet.free_email
+  )
+  rand(10).times do
+    user.posts.create!(
+    title: Faker::HarryPotter.location,
+    body: Faker::HarryPotter.quote
+    )
+
+  end
+
+end
