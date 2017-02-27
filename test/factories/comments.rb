@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :comment do
-    body "MyText"
+    body { Faker::Music.instrument }
   end
 end
