@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/posts/:id/comments' => 'posts#search'
   get '/users/:id/posts' => 'users#search'
   delete '/posts/:id' => 'posts#destroy'
+  post '/posts/:id/upvote' => 'posts#upvote'
 
 
 

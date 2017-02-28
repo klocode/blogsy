@@ -21,6 +21,14 @@ class PostsController < ApplicationController
     render status: 200
   end
 
+  def upvote
+    @post = Post.find_by(id: params[:id])
+    @post.upvotes += 1
+    @post.save!
+    render json: @post
+    # add a number to an upvote column every time post/upvote is made
+
+  end
 
 
 end
