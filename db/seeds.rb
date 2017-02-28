@@ -17,7 +17,13 @@
     title: Faker::HarryPotter.location,
     body: Faker::HarryPotter.quote
     )
-
   end
+
+# rand(4).times do
+#   user.posts.comments.create!(
+#   body:
+#
+#   )
+end
 
 end
