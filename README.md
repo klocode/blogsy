@@ -2,7 +2,7 @@
 
 A Rails API-only application using PostgreSQL as its database to track Users, their Posts, and Comments.
 
-Run 'bundle' to install the basic dependencies.
+Run `bundle` to install the basic dependencies.
 
 Run `rails db:create` to create a database.
 
