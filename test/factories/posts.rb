@@ -3,6 +3,6 @@ FactoryGirl.define do
     title { Faker::HarryPotter.location }
     body { Faker::HarryPotter.quote }
     user
-    summary { Faker::RickAndMorty.quote }
+    summary { Faker::Pokemon.name }
   end
 end
