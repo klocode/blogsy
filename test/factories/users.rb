@@ -3,5 +3,6 @@ FactoryGirl.define do
     username { Faker::HarryPotter.character }
     email { Faker::Internet.free_email }
     bio { Faker::Superhero.power }
+    password { Faker::Internet.password }
   end
 end

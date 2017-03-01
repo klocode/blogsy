@@ -24,4 +24,9 @@ class UserTest < ActiveSupport::TestCase
     assert @user.posts_count != 0
   end
 
+  def test_generates_a_token
+    
+
+  end
+
 end

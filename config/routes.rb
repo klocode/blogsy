@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
   get '/posts/:id' => 'posts#show'
   get '/posts/:id/comments' => 'posts#search'
-  get '/users/:id/posts' => 'users#search'
+  get '/users/:id/posts' => 'posts#index'
   delete '/posts/:id' => 'posts#destroy'
   post '/posts/:id/upvote' => 'posts#upvote'
 

@@ -1,4 +1,8 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id, :title, :body, :upvotes
-  belongs_to :user
+  attributes :title, :body, :username, :upvotes
+  # belongs_to :user
+
+  def username
+    object.user.username
+  end
 end

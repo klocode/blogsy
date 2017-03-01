@@ -1,8 +1,13 @@
 class PostsController < ApplicationController
 
   def index
-    @post = Post.all
-    render json: @post
+    if params[:id]
+      @user = User.find(params[:id])
+      @posts = @user.posts
+    else
+      @posts = Post.all
+    end
+    render json: @posts
   end
 
   def show
@@ -23,8 +28,7 @@ class PostsController < ApplicationController
 
   def upvote
     @post = Post.find(id: params[:id])
-    @post.upvotes += 1
-    @post.save!
+    @post.increment!(:upvotes)
     render json: @post
   end
 
