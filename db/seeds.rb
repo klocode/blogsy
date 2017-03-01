@@ -10,14 +10,22 @@
 5.times do
   user = User.create!(
   username: Faker::HarryPotter.character,
-  email: Faker::Internet.free_email
+  email: Faker::Internet.safe_email
   )
   rand(10).times do
-    user.posts.create!(
+    post = user.posts.create!(
     title: Faker::HarryPotter.location,
     body: Faker::HarryPotter.quote
     )
-
+    rand(5).times do
+      post.comments.create!(
+      body: Faker::Friends.quote,
+      user_id: User.pluck(:id).sample
+      )
+    end
   end
+
+
+
 
 end
